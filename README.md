@@ -103,14 +103,15 @@ by The Economist.
 Submit the following: 1. A link to your code (as a GitHub repository)
 and the finished product. Specifically we want to see: - How you
 obtained the data (it doesn’t need to be the original data but it should
-be similar!) \# 1st method (failed) I went to the **Supplementary
-appendix** of the Lancet publication and went to Data sources section. A
+be similar!) \
+
+# 1st method (failed) 
+I went to the **Supplementary appendix** of the Lancet publication and went to Data sources section. A
 complete list of sources is available from the [GBD 2015 Data Input
 Sources Tool](http://ghdx.healthdata.org/gbd-2015/data-input-sources).
 These data are no longer available on the GHDx.
 
-    # 2nd method
-
+# 2nd method
 I googled “Smoking prevalence and attributable disease burden” which is
 part of the title of the
 [Lancet](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(17)30819-X/fulltext)
