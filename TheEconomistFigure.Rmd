@@ -33,7 +33,7 @@ library(ggthemes)
 
 ```{r}
 #Reading the data
-smoking_prevalence <- read.csv("./IHME_GBD_2015_SMOKING_PREVALENCE_1980_2015_1/IHME_GBD_2015_SMOKING_PREVALENCE_1980_2015_Y2017M04D05.CSV")
+smoking_prevalence <- read.csv("IHME_GBD_2015_SMOKING_PREVALENCE_1980_2015_Y2017M04D05.CSV")
 ```
 
 ```{r}
