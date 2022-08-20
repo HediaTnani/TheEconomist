@@ -65,13 +65,16 @@ by The Economist.
 
     # Generating the figure
     smoking_prev_w <- pivot_wider(smoking_prev_PerChange, 
-                                   id_cols = Location, 
-                                   names_from = Sex, values_from = PercChange,
-                                   values_fn = ~mean(.x))  %>% mutate(Group = 
-                                   case_when(Male >0 & Female > 0 ~ "G1",
-                                   Male < 0 & Female > 0 ~ "G2",
-                                   Male < 0 & Female < 0 ~ "G3",
-                                   Male > 0 & Female < 0 ~ "G4"))
+                               id_cols = Location, 
+                               names_from = Sex, values_from = PercChange,
+                               values_fn = ~mean(.x))  %>% mutate(Group = 
+                                     if_else(Male >0 & Female > 0,
+                               "G1",
+                               if_else(Male < 0 & Female > 0,
+                                       "G2",if_else(Male < 0 & Female < 0,
+                                       "G3",if_else(Male > 0 & Female < 0,
+                                       "G4",
+                                       "0")))))
 
     p2 <- ggplot(smoking_prev_w, aes (x=Male, y=Female,colour = Group)) + geom_point(size = 3, alpha = 0.9) + scale_color_manual(values = c("tomato4", "deepskyblue3", "lightskyblue1", "tomato2"))
 
